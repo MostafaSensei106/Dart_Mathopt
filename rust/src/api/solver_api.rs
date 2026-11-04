@@ -15,7 +15,7 @@ use crate::models::dto_response::FrbSolveResponse;
 ///    (integer models on LP-only engines fail here, before any
 ///    native work, with `FrbSolverError::CapabilityError`).
 /// 3. **Execute** by lending the engine a borrow of the request
-///    zero-copy, no clone (see §11.1).
+///    zero-copy, no clone.
 ///
 /// NOTE: no `unwrap`/`expect`/`panic` on this path  every failure is a
 /// typed `FrbSolverError` (see agents.md §11.2). Timeouts are not
