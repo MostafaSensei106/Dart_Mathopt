@@ -18,7 +18,7 @@ use crate::models::dto_response::FrbSolveResponse;
 ///    zero-copy, no clone.
 ///
 /// NOTE: no `unwrap`/`expect`/`panic` on this path  every failure is a
-/// typed `FrbSolverError` (see agents.md §11.2). Timeouts are not
+/// typed `FrbSolverError` Timeouts are not
 /// errors: they come back inside the response as a time-limit status.
 pub async fn execute_solve(request: FrbSolveRequest) -> Result<FrbSolveResponse, FrbSolverError> {
     // 1. Route to the appropriate engine.

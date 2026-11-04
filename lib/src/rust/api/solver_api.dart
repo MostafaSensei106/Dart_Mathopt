@@ -20,10 +20,10 @@ import 'package:flutter_rust_bridge/flutter_rust_bridge_for_generated.dart';
 ///    (integer models on LP-only engines fail here, before any
 ///    native work, with `FrbSolverError::CapabilityError`).
 /// 3. **Execute** by lending the engine a borrow of the request
-///    zero-copy, no clone (see §11.1).
+///    zero-copy, no clone (see 11.1).
 ///
 /// NOTE: no `unwrap`/`expect`/`panic` on this path  every failure is a
-/// typed `FrbSolverError` (see agents.md §11.2). Timeouts are not
+/// typed `FrbSolverError` (see 11.2). Timeouts are not
 /// errors: they come back inside the response as a time-limit status.
 Future<FrbSolveResponse> executeSolve({required FrbSolveRequest request}) =>
     RustLib.instance.api.crateApiSolverApiExecuteSolve(request: request);

@@ -4,7 +4,7 @@ use thiserror::Error;
 ///
 /// Every failure on the solve path converts into one of these variants,
 /// so Dart receives typed errors instead of panics or strings.
-/// Rules (see agents.md §11):
+/// Rules (see 11):
 /// - No `panic!`/`unwrap()`/`expect()` in engine code; convert every
 ///   failure into one of these variants.
 /// - Keep payloads to plain strings/numbers so FRB can map them to Dart.
